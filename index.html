@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horixon Heaven - Find Your Perfect Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="logo">Horixon Heaven</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#properties">Properties</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h2 class="fade-in">Welcome to Horixon Heaven</h2>
+            <p class="fade-in">Discover the most beautiful homes that match your dreams.</p>
+            <button class="cta-btn bounce">Explore Now</button>
+        </div>
+    </section>
+
+    <section id="properties" class="slide-in">
+        <h2>Exclusive Listings</h2>
+        <div class="property-list">
+            <div class="property zoom-in">
+                <img src="house1.jpg" alt="Luxury Villa">
+                <h3>Luxury Villa</h3>
+                <p>Price: $500,000</p>
+                <button onclick="showDetails('Luxury Villa')">View Details</button>
+            </div>
+            <div class="property zoom-in">
+                <img src="house2.jpg" alt="Modern Apartment">
+                <h3>Modern Apartment</h3>
+                <p>Price: $300,000</p>
+                <button onclick="showDetails('Modern Apartment')">View Details</button>
+            </div>
+            <div class="property zoom-in">
+                <img src="house3.jpg" alt="Beachfront Mansion">
+                <h3>Beachfront Mansion</h3>
+                <p>Price: $1,200,000</p>
+                <button onclick="showDetails('Beachfront Mansion')">View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="fade-in">
+        <h2>Contact Horixon Heaven</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="pulse">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Horixon Heaven. Designed to Impress.</p>
+    </footer>
+</body>
+</html>
