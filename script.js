@@ -1,6 +1,6 @@
-/* script.js */ document.addEventListener("DOMContentLoaded", function() { const ctaButton = document.querySelector(".cta-btn"); ctaButton.addEventListener("mouseover", function() { ctaButton.style.backgroundColor = "#ff4f7c"; }); ctaButton.addEventListener("mouseout", function() { ctaButton.style.backgroundColor = "#ff758c"; }); });
+document.addEventListener("DOMContentLoaded", function () { console.log("Website Loaded Successfully"); });
 
-function showDetails(property) { alert(You selected: ${property}. Contact us for more details!); }
+function scrollToSection(sectionId) { document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' }); }
 
-document.querySelector(".contact-form").addEventListener("submit", function(event) { event.preventDefault(); alert("Thank you for reaching out! We'll get back to you soon."); });
+function submitForm() { alert("Thank you! Your message has been received. We will get back to you soon."); }
 
