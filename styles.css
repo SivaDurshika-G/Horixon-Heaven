@@ -1,81 +1,147 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horixon Heaven - Luxury Real Estate</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <h1 class="logo">Horixon Heaven</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#properties">Properties</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="home" class="hero-section">
-        <div class="hero-content">
-            <h2 class="fade-in">Find Your Dream Home</h2>
-            <p class="fade-in">Exclusive properties that redefine luxury living.</p>
-            <button class="cta-btn bounce">Explore Now</button>
-        </div>
-    </section>
+/* styles.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
 
-    <section id="properties" class="slide-in">
-        <h2>Exclusive Listings</h2>
-        <div class="property-list">
-            <div class="property zoom-in">
-                <img src="house1.jpg" alt="Luxury Villa">
-                <h3>Luxury Villa</h3>
-                <p>Price: $500,000</p>
-                <button onclick="showDetails('Luxury Villa')">View Details</button>
-            </div>
-            <div class="property zoom-in">
-                <img src="house2.jpg" alt="Modern Apartment">
-                <h3>Modern Apartment</h3>
-                <p>Price: $300,000</p>
-                <button onclick="showDetails('Modern Apartment')">View Details</button>
-            </div>
-            <div class="property zoom-in">
-                <img src="house3.jpg" alt="Beachfront Mansion">
-                <h3>Beachfront Mansion</h3>
-                <p>Price: $1,200,000</p>
-                <button onclick="showDetails('Beachfront Mansion')">View Details</button>
-            </div>
-            <div class="property zoom-in">
-                <img src="house4.jpg" alt="Skyline Penthouse">
-                <h3>Skyline Penthouse</h3>
-                <p>Price: $950,000</p>
-                <button onclick="showDetails('Skyline Penthouse')">View Details</button>
-            </div>
-            <div class="property zoom-in">
-                <img src="house5.jpg" alt="Countryside Retreat">
-                <h3>Countryside Retreat</h3>
-                <p>Price: $450,000</p>
-                <button onclick="showDetails('Countryside Retreat')">View Details</button>
-            </div>
-        </div>
-    </section>
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #ff7eb3, #ff758c);
+    padding: 15px 50px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
 
-    <section id="contact" class="fade-in">
-        <h2>Contact Us</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit" class="pulse">Send Message</button>
-        </form>
-    </section>
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    animation: fadeIn 1.5s;
+}
 
-    <footer>
-        <p>&copy; 2025 Horixon Heaven. Experience Luxury Living.</p>
-    </footer>
-</body>
-</html>
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+.hero-section {
+    background: url('luxury-home.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    animation: fadeIn 2s;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+}
+
+.cta-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    background: #ff758c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    animation: bounce 2s infinite;
+}
+
+.cta-btn:hover {
+    background: #ff4f7c;
+}
+
+.property-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 50px;
+}
+
+.property {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    animation: zoomIn 1s;
+}
+
+.property img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.property:hover {
+    transform: scale(1.05);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background: #ff758c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 5px rgba(255, 117, 140, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(255, 117, 140, 1); }
+    100% { box-shadow: 0 0 5px rgba(255, 117, 140, 0.5); }
+}
