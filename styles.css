@@ -1,110 +1,81 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horixon Heaven - Luxury Real Estate</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="logo">Horixon Heaven</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#properties">Properties</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h2 class="fade-in">Find Your Dream Home</h2>
+            <p class="fade-in">Exclusive properties that redefine luxury living.</p>
+            <button class="cta-btn bounce">Explore Now</button>
+        </div>
+    </section>
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background: #2C3E50;
-    color: white;
-}
+    <section id="properties" class="slide-in">
+        <h2>Exclusive Listings</h2>
+        <div class="property-list">
+            <div class="property zoom-in">
+                <img src="house1.jpg" alt="Luxury Villa">
+                <h3>Luxury Villa</h3>
+                <p>Price: $500,000</p>
+                <button onclick="showDetails('Luxury Villa')">View Details</button>
+            </div>
+            <div class="property zoom-in">
+                <img src="house2.jpg" alt="Modern Apartment">
+                <h3>Modern Apartment</h3>
+                <p>Price: $300,000</p>
+                <button onclick="showDetails('Modern Apartment')">View Details</button>
+            </div>
+            <div class="property zoom-in">
+                <img src="house3.jpg" alt="Beachfront Mansion">
+                <h3>Beachfront Mansion</h3>
+                <p>Price: $1,200,000</p>
+                <button onclick="showDetails('Beachfront Mansion')">View Details</button>
+            </div>
+            <div class="property zoom-in">
+                <img src="house4.jpg" alt="Skyline Penthouse">
+                <h3>Skyline Penthouse</h3>
+                <p>Price: $950,000</p>
+                <button onclick="showDetails('Skyline Penthouse')">View Details</button>
+            </div>
+            <div class="property zoom-in">
+                <img src="house5.jpg" alt="Countryside Retreat">
+                <h3>Countryside Retreat</h3>
+                <p>Price: $450,000</p>
+                <button onclick="showDetails('Countryside Retreat')">View Details</button>
+            </div>
+        </div>
+    </section>
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
+    <section id="contact" class="fade-in">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="pulse">Send Message</button>
+        </form>
+    </section>
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-.hero-section {
-    background: url('hero.jpg') no-repeat center center/cover;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-}
-
-.hero-content h2 {
-    font-size: 40px;
-    animation: fadeIn 2s ease-in;
-}
-
-.cta-btn {
-    padding: 10px 20px;
-    font-size: 18px;
-    background: #E67E22;
-    color: white;
-    border: none;
-    cursor: pointer;
-    animation: bounce 2s infinite;
-}
-
-.property-list {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-}
-
-.property {
-    background: #ECF0F1;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform: scale(1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.property:hover {
-    transform: scale(1.05);
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    margin: auto;
-}
-
-.contact-form input, .contact-form textarea {
-    margin-bottom: 10px;
-    padding: 8px;
-    border: 1px solid #BDC3C7;
-    border-radius: 5px;
-}
-
-.pulse {
-    animation: pulse 2s infinite;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
+    <footer>
+        <p>&copy; 2025 Horixon Heaven. Experience Luxury Living.</p>
+    </footer>
+</body>
+</html>
