@@ -1,23 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
-    console.log("Horixon Heaven Loaded!");
+/* script.js */ document.addEventListener("DOMContentLoaded", function() { const ctaButton = document.querySelector(".cta-btn"); ctaButton.addEventListener("mouseover", function() { ctaButton.style.backgroundColor = "#ff4f7c"; }); ctaButton.addEventListener("mouseout", function() { ctaButton.style.backgroundColor = "#ff758c"; }); });
 
-    document.querySelector(".cta-btn").addEventListener("click", () => {
-        alert("Welcome to Horixon Heaven! Explore our stunning properties.");
-    });
+function showDetails(property) { alert(You selected: ${property}. Contact us for more details!); }
 
-    document.querySelectorAll(".property button").forEach(button => {
-        button.addEventListener("click", event => {
-            let propertyName = event.target.previousElementSibling.previousElementSibling.textContent;
-            showDetails(propertyName);
-        });
-    });
+document.querySelector(".contact-form").addEventListener("submit", function(event) { event.preventDefault(); alert("Thank you for reaching out! We'll get back to you soon."); });
 
-    function showDetails(propertyName) {
-        alert(`More details about ${propertyName} coming soon!`);
-    }
-
-    document.querySelector(".contact-form").addEventListener("submit", event => {
-        event.preventDefault();
-        alert("Thank you for contacting Horixon Heaven! We will get back to you soon.");
-    });
-});
