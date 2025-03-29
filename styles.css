@@ -1,147 +1,48 @@
-/* styles.css */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
+/* styles.css */ body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: linear-gradient(to right, #f8f9fa, #e9ecef); color: #333; }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(90deg, #ff7eb3, #ff758c);
-    padding: 15px 50px;
-    color: white;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
+header { display: flex; justify-content: space-between; align-items: center; background: linear-gradient(90deg, #ff7eb3, #ff758c); padding: 15px 50px; color: white; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    animation: fadeIn 1.5s;
-}
+.logo { font-size: 24px; font-weight: bold; animation: fadeIn 1.5s; }
 
-nav ul {
-    list-style: none;
-    display: flex;
-}
+nav ul { list-style: none; display: flex; padding: 0; }
 
-nav ul li {
-    margin: 0 15px;
-}
+nav ul li { margin: 0 15px; }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
+nav ul li a { color: white; text-decoration: none; font-weight: bold; transition: 0.3s; }
 
-nav ul li a:hover {
-    color: #ffd700;
-}
+nav ul li a:hover { color: #ffd700; }
 
-.hero-section {
-    background: url('luxury-home.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    animation: fadeIn 2s;
-}
+.hero-section { background: url('luxury-home.jpg') no-repeat center center/cover; height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; animation: fadeIn 2s; padding: 20px; }
 
-.hero-content h2 {
-    font-size: 3rem;
-}
+.hero-content h2 { font-size: 3rem; }
 
-.cta-btn {
-    padding: 10px 20px;
-    font-size: 18px;
-    background: #ff758c;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-    animation: bounce 2s infinite;
-}
+.cta-btn { padding: 10px 20px; font-size: 18px; background: #ff758c; color: white; border: none; cursor: pointer; transition: 0.3s; animation: bounce 2s infinite; border-radius: 5px; }
 
-.cta-btn:hover {
-    background: #ff4f7c;
-}
+.cta-btn:hover { background: #ff4f7c; }
 
-.property-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 50px;
-}
+.property-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 50px; }
 
-.property {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    animation: zoomIn 1s;
-}
+.property { background: white; padding: 20px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out; animation: zoomIn 1s; text-align: center; }
 
-.property img {
-    width: 100%;
-    border-radius: 10px;
-}
+.property img { width: 100%; border-radius: 10px; }
 
-.property:hover {
-    transform: scale(1.05);
-}
+.property:hover { transform: scale(1.05); }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px;
-}
+.contact-form { display: flex; flex-direction: column; align-items: center; padding: 50px; background: #fff; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); margin: 20px; }
 
-.contact-form input, .contact-form textarea {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+.contact-form input, .contact-form textarea { width: 80%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; }
 
-.contact-form button {
-    padding: 10px 20px;
-    background: #ff758c;
-    color: white;
-    border: none;
-    cursor: pointer;
-    animation: pulse 2s infinite;
-}
+.contact-form button { padding: 10px 20px; background: #ff758c; color: white; border: none; cursor: pointer; animation: pulse 2s infinite; border-radius: 5px; font-size: 16px; }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
+footer { background: #333; color: white; text-align: center; padding: 15px; position: relative; bottom: 0; width: 100%; }
 
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-@keyframes zoomIn {
-    from { transform: scale(0.8); }
-    to { transform: scale(1); }
-}
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
-@keyframes pulse {
-    0% { box-shadow: 0 0 5px rgba(255, 117, 140, 0.5); }
-    50% { box-shadow: 0 0 20px rgba(255, 117, 140, 1); }
-    100% { box-shadow: 0 0 5px rgba(255, 117, 140, 0.5); }
-}
+@keyframes zoomIn { from { transform: scale(0.8); } to { transform: scale(1); } }
+
+@keyframes pulse { 0% { box-shadow: 0 0 5px rgba(255, 117, 140, 0.5); } 50% { box-shadow: 0 0 20px rgba(255, 117, 140, 1); } 100% { box-shadow: 0 0 5px rgba(255, 117, 140, 0.5); } }
+
+/* Responsive Design */ @media (max-width: 768px) { header { flex-direction: column; text-align: center; padding: 10px; } nav ul { flex-direction: column; } .hero-content h2 { font-size: 2rem; } .cta-btn { font-size: 16px; } .property-list { grid-template-columns: 1fr; } }
+
