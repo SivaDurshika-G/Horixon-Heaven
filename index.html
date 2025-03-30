@@ -1,81 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horixon Heaven - Luxury Real Estate</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1 class="logo">Horixon Heaven</h1>
+        <div class="logo">Horixon Heaven</div>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#properties">Properties</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-    </header>
-    
-    <section id="home" class="hero-section">
-        <div class="hero-content">
-            <h2 class="fade-in">Find Your Dream Home</h2>
-            <p class="fade-in">Exclusive properties that redefine luxury living.</p>
-            <button class="cta-btn bounce">Explore Now</button>
+    </header><section id="home" class="hero-section">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>Find Your Dream Home with Horixon Heaven</h1>
+        <p>Luxury residences that redefine elegance and comfort.</p>
+        <button class="cta-btn" onclick="scrollToSection('properties')">Explore Properties</button>
+    </div>
+</section>
+
+<section id="properties" class="property-list">
+    <h2>Exclusive Properties</h2>
+    <div class="property-container">
+        <div class="property fade-in">
+            <img src="house1.jpg" alt="Luxury Villa">
+            <h3>Modern Villa</h3>
+            <p>5 BHK | Ocean View | $2.5M</p>
+            <button class="details-btn">View Details</button>
         </div>
-    </section>
-
-    <section id="properties" class="slide-in">
-        <h2>Exclusive Listings</h2>
-        <div class="property-list">
-            <div class="property zoom-in">
-                <img src="house1.jpg" alt="Luxury Villa">
-                <h3>Luxury Villa</h3>
-                <p>Price: $500,000</p>
-                <button onclick="showDetails('Luxury Villa')">View Details</button>
-            </div>
-            <div class="property zoom-in">
-                <img src="house2.jpg" alt="Modern Apartment">
-                <h3>Modern Apartment</h3>
-                <p>Price: $300,000</p>
-                <button onclick="showDetails('Modern Apartment')">View Details</button>
-            </div>
-            <div class="property zoom-in">
-                <img src="house3.jpg" alt="Beachfront Mansion">
-                <h3>Beachfront Mansion</h3>
-                <p>Price: $1,200,000</p>
-                <button onclick="showDetails('Beachfront Mansion')">View Details</button>
-            </div>
-            <div class="property zoom-in">
-                <img src="house4.jpg" alt="Skyline Penthouse">
-                <h3>Skyline Penthouse</h3>
-                <p>Price: $950,000</p>
-                <button onclick="showDetails('Skyline Penthouse')">View Details</button>
-            </div>
-            <div class="property zoom-in">
-                <img src="house5.jpg" alt="Countryside Retreat">
-                <h3>Countryside Retreat</h3>
-                <p>Price: $450,000</p>
-                <button onclick="showDetails('Countryside Retreat')">View Details</button>
-            </div>
+        <div class="property fade-in">
+            <img src="house2.jpg" alt="Luxury Apartment">
+            <h3>Skyline Apartment</h3>
+            <p>3 BHK | City Center | $1.2M</p>
+            <button class="details-btn">View Details</button>
         </div>
-    </section>
+        <div class="property fade-in">
+            <img src="house3.jpg" alt="Elegant Mansion">
+            <h3>Grand Mansion</h3>
+            <p>6 BHK | Private Pool | $4.5M</p>
+            <button class="details-btn">View Details</button>
+        </div>
+    </div>
+</section>
 
-    <section id="contact" class="fade-in">
-        <h2>Contact Us</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit" class="pulse">Send Message</button>
-        </form>
-    </section>
+<section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-container">
+        <div class="service slide-in">
+            <h3>Property Buying</h3>
+            <p>Find the perfect home with expert assistance.</p>
+        </div>
+        <div class="service slide-in">
+            <h3>Luxury Rentals</h3>
+            <p>Exclusive rental properties for premium living.</p>
+        </div>
+        <div class="service slide-in">
+            <h3>Investment Advisory</h3>
+            <p>Guidance on the best real estate investments.</p>
+        </div>
+    </div>
+</section>
 
-    <footer>
-        <p>&copy; 2025 Horixon Heaven. Experience Luxury Living.</p>
-    </footer>
+<section id="about" class="about">
+    <h2>About Us</h2>
+    <p>Horixon Heaven is a premium real estate agency offering luxury homes and exclusive property deals.</p>
+</section>
+
+<section id="contact" class="contact-form">
+    <h2>Contact Us</h2>
+    <p>We’re here to help you find your dream home!</p>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="tel" placeholder="Your Phone Number" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2025 Horixon Heaven. All Rights Reserved.</p>
+</footer>
+
 </body>
 </html>
